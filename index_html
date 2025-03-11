@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Toolkit - YouTube & PDF Solutions</title>
+    <meta name="description" content="All-in-one digital toolkit for YouTube video downloads, PDF conversions, and various file processing tools. Free and easy to use!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2B59C3;
+            --secondary: #253C78;
+            --accent: #D36582;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+        }
+
+        .tool-select {
+            border: none;
+            border-left: 1px solid #ddd;
+            padding: 0 1rem;
+            margin-right: 5px;
+            background: transparent;
+        }
+
+        /* Tools Grid */
+        .tools-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 6rem;
+            }
+
+            .search-bar {
+                flex-direction: column;
+                background: transparent;
+            }
+
+            .tool-select {
+                border: none;
+                margin: 0.5rem 0;
+            }
+
+            .search-input {
+                border-radius: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">ToolKit</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#tools">Tools</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">/vid-download.html
+        <h1>Your All-in-One Digital Toolkit</h1>
+        <p>Download videos, convert files, and optimize content effortlessly</p>
+        
+        <div class="search-bar">
+            <select class="tool-select">
+                <option>YouTube Downloader</option>
+                <option>PDF Converter</option>
+                <option>Video Converter</option>
+                <option>File Compressor</option>
+            </select>
+            <input type="text" class="search-input" placeholder="Enter URL or choose file...">
+            <button class="btn">Process</button>
+        </div>
+    </section>
+
+    <!-- Featured Tools -->
+    <section class="tools-section">
+        <h2 class="section-title">Popular Tools</h2>
+        <div class="tools-grid">
+            <!-- YouTube Tools -->
+            <div class="tool-card">
+                <i class="fas fa-file-video tool-icon"></i>
+                <h3>YouTube Video Downloader</h3>
+                <p>Download videos in MP4, WEBM, 4K quality</p>
+            </div>
+
+            <div class="tool-card">
+    <i class="fas fa-music tool-icon"></i>
+    <h3>YouTube to MP3</h3>
+    <p>Convert videos to high-quality audio files</p>
+    <a href="youtube-to-mp3.html" class="btn btn-primary">Convert Now</a>
+</div>
+
+
+            <!-- PDF Tools -->
+            <div class="tool-card">
+                <i class="fas fa-file-pdf tool-icon"></i>
+                <h3>PDF Converter</h3>
+                <p>Convert to Word, Excel, JPG and more</p>
+            </div>
+
+            <div class="tool-card">
+                <i class="fas fa-file-archive tool-icon"></i>
+                <h3>PDF Compressor</h3>
+                <p>Reduce PDF size without quality loss</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Secure Processing</h3>
+                <p>All files are processed securely and deleted automatically</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3>Fast Conversions</h3>
+                <p>High-speed processing powered by cloud technology</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-heart feature-icon"></i>
+                <h3>Free to Use</h3>
+                <p>No registration required - completely free</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ToolKit</h3>
+                <p>Your complete digital solution platform</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#tools">All Tools</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="#twitter">Twitter</a></li>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
